@@ -1,0 +1,143 @@
+<div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+    <header class="py-5 my-5">
+        <div class="grid grid-cols-2 justify-items-end items-center">
+            <h1 class="font-bold text-3xl">DETALLE DE oRDEN</h1>
+            <div>
+                <img class="w-10" src="/assets/img/icon-user.png" alt="icon-user">
+            </div>
+        </div>
+    </header>
+
+    <!-- Order Detail -->
+    <section class="my-10">
+        <div class="flex flex-col px-10 gap-4">
+            <div class="grid grid-cols-12 gap-4">
+                <label for="name" class="col-span-3 font-extrabold text-lg text-right">
+                    No. de Pedido:
+                </label>
+                <span class="col-span-4 text-lg">
+                    150
+                </span>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <label for="phone" class="col-span-3 font-extrabold text-lg text-right">
+                    Cliente
+                </label>
+                <span class="col-span-4 text-lg">
+                    Roberto Eduardo Lechuga Torres
+                </span>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <label for="mail" class="col-span-3 font-extrabold text-lg text-right">
+                    Email:
+                </label>
+                <span class="col-span-4 text-lg">
+                    roberto.lechuga@gmail.com
+                </span>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <label for="address" class="col-span-3 font-extrabold text-lg text-right">
+                    Fecha:
+                </label>
+                <span class="col-span-4 text-lg">
+                    2022-01-22
+                </span>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <label for="address" class="col-span-3 font-extrabold text-lg text-right">
+                    Estatus:
+                </label>
+                <span class="col-span-4 text-lg">
+                    Estatus
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Detail Data Table -->
+    <section class="my-5">
+        <div class="flex flex-col px-8">
+            <h2 class="font-extrabold text-lg">Detalle de Pedido:</h2>
+            <div class="overflow-hidden">
+                <table class="w-full text-center text-lg font-medium">
+                    <thead class="border-b bg-white font-medium">
+                        <tr>
+                            <th scope="col" class="px-6 py-4">Producto</th>
+                            <th scope="col" class="px-6 py-4">Cantidad</th>
+                            <th scope="col" class="px-6 py-4">Id Producto</th>
+                            <th scope="col" class="px-6 py-4">Estatus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let item of products">
+                            <tr class="border-b bg-white hover:bg-neutral-100">
+                                <td class="whitespace-nowrap px-6 py-4 font-medium">{{item.product}}</td>
+                                <td class="whitespace-nowrap px-6 py-4">{{item.productNumber}}</td>
+                                <td class="whitespace-nowrap px-6 py-4">{{item.productDate}}</td>
+                                <td class="whitespace-nowrap px-6 py-4">{{item.productStatus}}</td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Detail -->
+    <section class="my-10">
+        <div class="flex flex-col px-10 gap-4">
+            <div class="grid grid-cols-12 gap-4">
+                <label for="name" class="col-span-3 font-extrabold text-lg text-right">
+                    Envio:
+                </label>
+                <input id="name" class="col-span-4 bg-gray-200 border border-gray-700 rounded p-2" type="text" />
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <label for="phone" class="col-span-3 font-extrabold text-lg text-right">
+                    Proveedor
+                </label>
+                <span class="col-span-4 text-lg">
+                    Gorras Chinas SA DE CV
+                </span>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <label for="mail" class="col-span-3 font-extrabold text-lg text-right">
+                    Email:
+                </label>
+                <span class="col-span-4 text-lg">
+                    roberto.lechuga@gmail.com
+                </span>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <label for="address" class="col-span-3 font-extrabold text-lg text-right">
+                    Fecha:
+                </label>
+                <span class="col-span-4 text-lg">
+                    2022-01-22
+                </span>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <label for="address" class="col-span-3 font-extrabold text-lg text-right">
+                    Estatus:
+                </label>
+                <span class="col-span-4 text-lg">
+                    Estatus
+                </span>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <label for="address" class="col-span-3 font-extrabold text-lg text-right">
+                    Comentarios:
+                </label>
+                <textarea id="address" class="col-span-4 bg-gray-200 border border-gray-700 rounded p-2" name="" id="" cols="30" rows="3"></textarea>
+            </div>
+        </div>
+    </section>
+
+    <footer class="my-5">
+        <div class="relative float-right pb-5">
+            <button type="button"
+                class="inline-block rounded bg-emerald-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
+                Actualizar</button>
+        </div>
+    </footer>
+</div>

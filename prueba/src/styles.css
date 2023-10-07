@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ==== Fonts import ==== */
+@font-face {
+    font-family: 'Hannotate SC';
+    src: url('/assets/fonts/hannotate-sc/hannotate-sc-regular.otf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Hansief';
+    src: url('/assets/fonts/hansief/Hansief.otf') format("truetype");
+}
+
+/* ==== General ==== */
+a,
+button,
+table,
+label,
+h2 {
+    font-family: 'Hannotate SC';
+}
+
+h1 {
+    font-family: 'Hansief';
+}

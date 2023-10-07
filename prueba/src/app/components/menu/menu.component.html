@@ -1,0 +1,20 @@
+<aside class="[grid-area:aside] flex-col flex overflow-y-auto">
+    <nav class="flex flex-col flex-1 gap-2">
+        <div class="bg-white border rounded-lg p-2 h-screen">
+            <div class="flex justify-center mb-4">
+                <a routerLink="/" title="Logo">
+                    <img class="w-40" src="/assets/img/Alebrije-Logo.png" alt="Alebrije Logo" height="124px" width="auto">
+                </a>
+            </div>
+            <ul>
+                <ng-container *ngFor="let menu of menuList">
+                    <li>
+                        <a class="flex justify-center gap-4 items-center hover:font-extrabold py-3 px-5 font-medium text-lg transition duration-300"
+                            [routerLink]="menu.ref"> {{ menu.title }}
+                        </a>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </nav>
+</aside>

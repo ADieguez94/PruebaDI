@@ -1,0 +1,20 @@
+<div id="app" class="relative h-screen p-2 gap-2">
+  <app-menu></app-menu>
+
+  <main class="[grid-area:main] bg-white border rounded-lg overflow-y-auto w-full">
+    <router-outlet></router-outlet>
+  </main>
+
+  <app-footer class="[grid-area:footer]"></app-footer>
+</div>
+
+<style>
+  #app {
+    display: grid;
+    grid-template-areas:
+      "aside main"
+      "footer footer";
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 1fr auto;
+  }
+</style>

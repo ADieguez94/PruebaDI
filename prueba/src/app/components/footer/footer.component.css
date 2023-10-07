@@ -1,0 +1,9 @@
+footer {
+    background-color: #E1E1E1 !important;
+}
+
+.background {
+    background-image: url('/assets/img/Alebirje-Logo-Transparent.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+}

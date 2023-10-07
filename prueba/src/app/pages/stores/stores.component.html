@@ -1,0 +1,61 @@
+<div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+    <header class="py-5 my-5">
+        <div class="grid grid-cols-2 justify-items-end items-center">
+            <h1 class="font-bold text-3xl">TIENDAS</h1>
+            <div>
+                <img class="w-10" src="/assets/img/icon-user.png" alt="icon-user">
+            </div>
+        </div>
+        <div class="flex flex-col my-16">
+            <div class="relative mb-4 flex flex-wrap items-stretch justify-end">
+                <input type="search"
+                    class="rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none"
+                    placeholder="Buscar" aria-label="Buscar" />
+                <span
+                    class="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                        <path fill-rule="evenodd"
+                            d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" />
+                    </svg>
+                </span>
+            </div>
+            <div>
+                <button type="button"
+                    class="inline-block rounded bg-[#E31B85] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
+                    Nueva Tienda</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stores Data Table -->
+    <section class="my-5">
+        <div class="flex flex-col px-8">
+            <div class="overflow-hidden">
+                <table class="w-full text-center text-lg font-medium">
+                    <thead class="border-b bg-white font-medium">
+                        <tr>
+                            <th scope="col" class="px-6 py-4">Id Tienda</th>
+                            <th scope="col" class="px-6 py-4">Nombre</th>
+                            <th scope="col" class="px-6 py-4">Estatus</th>
+                            <th scope="col" class="px-6 py-4"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let item of stores">
+                            <tr class="border-b bg-white hover:bg-neutral-100">
+                                <td class="whitespace-nowrap px-6 py-4 font-medium">{{item.storeNumber}}</td>
+                                <td class="whitespace-nowrap px-6 py-4">{{item.storeName}}</td>
+                                <td class="whitespace-nowrap px-6 py-4">{{item.storeStatus}}</td>
+                                <td class="whitespace-nowrap px-6 py-4">
+                                    <a routerLink='/stores/store_detail'>
+                                        <img class="w-10" src="/assets/img/icon-view.png" alt="view_details">
+                                    </a>
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
